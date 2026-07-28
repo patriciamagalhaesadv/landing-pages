@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patrícia Magalhães — Advocacia de Família</title>
+<meta name="description" content="Advocacia de família com atendimento online para todo o Brasil. Divórcio, guarda, pensão alimentícia e partilha de bens conduzidos com clareza e estratégia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1C2733;
+    --wine: #6E2A3C;
+    --wine-deep: #4E1D2B;
+    --paper: #FAF7F1;
+    --paper-2: #F1ECE1;
+    --line: #DCD4C4;
+    --text-soft: #5B6672;
+    --text-faint: #8B8F87;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 32px; }
+  a { color: inherit; text-decoration: none; }
+
+  header { padding: 28px 0; border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; }
+  .brand { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 500; letter-spacing: 0.01em; }
+  .brand .oab { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--text-faint); letter-spacing: 0.06em; margin-top: 2px; }
+  nav a { font-size: 14px; color: var(--text-soft); margin-left: 28px; transition: color 0.15s; }
+  nav a:hover { color: var(--wine); }
+  @media (max-width: 640px) { nav { display: none; } }
+
+  .hero { padding: 108px 0 96px; }
+  .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--wine); margin-bottom: 24px; }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(34px, 5vw, 54px);
+    font-weight: 500;
+    line-height: 1.14;
+    max-width: 760px;
+    letter-spacing: -0.01em;
+  }
+  .lede { font-size: 18px; color: var(--text-soft); max-width: 540px; margin-top: 26px; line-height: 1.65; }
+  .cta-row { display: flex; gap: 16px; margin-top: 40px; flex-wrap: wrap; align-items: center; }
+  .btn-primary { background: var(--wine); color: var(--paper); padding: 14px 26px; border-radius: 3px; font-size: 15px; font-weight: 500; display: inline-block; transition: background 0.15s; }
+  .btn-primary:hover { background: var(--wine-deep); }
+  .btn-ghost { color: var(--text-soft); font-size: 14px; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+  .btn-ghost:hover { color: var(--wine); border-color: var(--wine); }
+  .hero-note { font-size: 13px; color: var(--text-faint); margin-top: 22px; }
+
+  .intro { padding: 88px 0; border-top: 1px solid var(--line); }
+  .intro-text { font-family: 'Fraunces', serif; font-size: 24px; line-height: 1.55; max-width: 680px; color: var(--ink); }
+  .intro-text + .intro-text { margin-top: 20px; color: var(--text-soft); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.7; }
+
+  .section { padding: 76px 0; border-top: 1px solid var(--line); }
+  .section-head { margin-bottom: 44px; }
+  h2 { font-family: 'Fraunces', serif; font-size: 27px; font-weight: 500; }
+  .section-sub { font-size: 14.5px; color: var(--text-soft); max-width: 420px; margin-top: 10px; }
+
+  .area-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .area-card { background: var(--paper); padding: 28px 26px; }
+  .area-card .num { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--wine); }
+  .area-card h3 { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 500; margin: 12px 0 10px; }
+  .area-card p { font-size: 14px; color: var(--text-soft); line-height: 1.6; }
+
+  .process { background: var(--paper-2); }
+  .timeline { position: relative; margin-top: 8px; padding-left: 28px; border-left: 1px solid var(--line); }
+  .step { position: relative; padding: 22px 0; }
+  .step:last-child { padding-bottom: 0; }
+  .step::before { content: ''; position: absolute; left: -33px; top: 26px; width: 9px; height: 9px; border-radius: 50%; background: var(--wine); }
+  .step .stage { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--text-faint); letter-spacing: 0.08em; text-transform: uppercase; }
+  .step h3 { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 500; margin: 6px 0 6px; }
+  .step p { font-size: 14.5px; color: var(--text-soft); max-width: 520px; }
+
+  .diff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 36px 40px; margin-top: 8px; }
+  .diff-block h3 { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 500; margin-bottom: 8px; }
+  .diff-block p { font-size: 14.5px; color: var(--text-soft); line-height: 1.6; max-width: 320px; }
+
+  .checklist { margin-top: 8px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px 32px; }
+  .checklist div { font-size: 15px; color: var(--text-soft); padding-left: 20px; position: relative; line-height: 1.55; }
+  .checklist div::before { content: '—'; position: absolute; left: 0; color: var(--wine); }
+
+  .about-figure { font-family: 'Fraunces', serif; font-size: 22px; line-height: 1.45; max-width: 620px; }
+  .about-body { margin-top: 24px; }
+  .about-body p { font-size: 15px; color: var(--text-soft); margin-bottom: 16px; max-width: 560px; }
+  .credential { margin-top: 8px; font-size: 13px; color: var(--text-faint); font-family: 'IBM Plex Mono', monospace; }
+
+  .faq-item { border-top: 1px solid var(--line); padding: 22px 0; }
+  .faq-item:last-child { border-bottom: 1px solid var(--line); }
+  .faq-item h3 { font-family: 'Fraunces', serif; font-size: 17px; font-weight: 500; margin-bottom: 8px; }
+  .faq-item p { font-size: 14.5px; color: var(--text-soft); max-width: 620px; }
+
+  .contact-inner { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 32px; }
+  .contact h2 { max-width: 460px; }
+  .contact-links { display: flex; flex-direction: column; gap: 10px; font-size: 15px; }
+  .contact-links a:hover { color: var(--wine); }
+
+  footer { border-top: 1px solid var(--line); padding: 24px 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 12px; color: var(--text-faint); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">Patrícia Magalhães
+      <span class="oab">ADVOCACIA</span>
+    </div>
+    <nav>
+      <a href="#situacoes">Situações</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Advocacia de família</div>
+    <h1>Algumas decisões mudam o rumo de uma vida inteira. Elas merecem ser tomadas com clareza, não com pressa.</h1>
+    <p class="lede">Divórcio, guarda, pensão alimentícia e partilha de bens, conduzidos com estratégia, clareza e segurança jurídica para que você tome decisões bem orientadas.</p>
+    <div class="cta-row">
+      <a class="btn-primary" href="#contato">Iniciar uma conversa</a>
+      <a class="btn-ghost" href="#processo">Como funciona o atendimento</a>
+    </div>
+    <p class="hero-note">Uma conversa inicial para entender sua situação, sem compromisso.</p>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <p class="intro-text">Divórcio, guarda, pensão alimentícia raramente se resumem a questões jurídicas. São, antes de tudo, o redesenho de uma vida inteira.</p>
+    <p class="intro-text">Este não é o trabalho de conduzir mais um processo. É o de oferecer clareza em meio à incerteza, para que você compreenda seus direitos e faça escolhas com segurança.</p>
+  </div>
+</section>
+
+<section class="section" id="perguntas">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Antes de iniciar um processo</h2>
+      <p class="section-sub" style="max-width: 600px;">É comum que as primeiras dúvidas apareçam muito antes da decisão de procurar uma advogada. Talvez você esteja se perguntando:</p>
+    </div>
+    <div class="checklist" style="grid-template-columns: 1fr;">
+      <div>Posso sair de casa?</div>
+      <div>Como funciona a guarda?</div>
+      <div>Tenho direito à pensão?</div>
+      <div>Como será feita a partilha?</div>
+      <div>É possível resolver tudo por acordo?</div>
+    </div>
+    <p class="section-sub" style="max-width: 600px; margin-top: 32px;">Cada resposta depende da realidade de cada família. Uma orientação jurídica no início costuma evitar decisões tomadas apenas pela urgência.</p>
+  </div>
+</section>
+
+<section class="section" id="situacoes">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Situações em que posso atuar</h2>
+      <p class="section-sub">Cada situação impõe suas próprias perguntas. O que muda é o que está em jogo, e o caminho mais adequado para cada caso.</p>
+    </div>
+    <div class="area-grid">
+      <div class="area-card">
+        <div class="num">01</div>
+        <h3>Divórcio</h3>
+        <p>Consensual, extrajudicial ou litigioso. A via mais adequada depende do entendimento entre as partes e do que está em jogo, no patrimônio e na rotina que se reorganiza.</p>
+      </div>
+      <div class="area-card">
+        <div class="num">02</div>
+        <h3>Guarda e convivência</h3>
+        <p>Definição de guarda e do regime de convivência, atenta à rotina real dos filhos e à previsibilidade que o dia a dia exige depois da separação.</p>
+      </div>
+      <div class="area-card">
+        <div class="num">03</div>
+        <h3>Pensão alimentícia</h3>
+        <p>Fixação, revisão ou execução de pensão alimentícia, à luz da capacidade financeira de cada parte e do histórico de sustento da família.</p>
+      </div>
+      <div class="area-card">
+        <div class="num">04</div>
+        <h3>Partilha de bens</h3>
+        <p>Levantamento e divisão do patrimônio conforme o regime de bens, com atenção às situações em que uma das partes teve menor voz na administração desses bens ao longo do casamento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section process" id="processo">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Como funciona o atendimento</h2>
+      <p class="section-sub">Cada processo tem suas particularidades. Ainda assim, existe algo que não muda: você sempre saberá em que etapa está, quais são os próximos passos e quais decisões precisarão ser tomadas.</p>
+    </div>
+    <div class="timeline">
+      <div class="step">
+        <div class="stage">Etapa 1</div>
+        <h3>Conversa inicial</h3>
+        <p>Levantamento da situação, documentos disponíveis e expectativas em relação ao processo.</p>
+      </div>
+      <div class="step">
+        <div class="stage">Etapa 2</div>
+        <h3>Análise e estratégia</h3>
+        <p>Avaliação jurídica do caso e apresentação dos caminhos possíveis, com prazos e custos estimados.</p>
+      </div>
+      <div class="step">
+        <div class="stage">Etapa 3</div>
+        <h3>Condução do processo</h3>
+        <p>Elaboração de petições, acompanhamento de audiências e comunicação regular sobre o andamento.</p>
+      </div>
+      <div class="step">
+        <div class="stage">Etapa 4</div>
+        <h3>Encerramento</h3>
+        <p>Formalização do acordo ou decisão judicial e orientação sobre os próximos passos, se houver.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Diferenciais</h2>
+      <p class="section-sub">O que, na prática, faz diferença para quem já atravessou esse processo.</p>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-block">
+        <h3>Comunicação clara</h3>
+        <p>Você compreenderá cada etapa do processo sem precisar decifrar termos jurídicos.</p>
+      </div>
+      <div class="diff-block">
+        <h3>Atendimento direto</h3>
+        <p>Todo o acompanhamento é realizado pela própria advogada responsável pelo caso.</p>
+      </div>
+      <div class="diff-block">
+        <h3>Estratégia</h3>
+        <p>As decisões são planejadas antes da primeira petição.</p>
+      </div>
+      <div class="diff-block">
+        <h3>Transparência</h3>
+        <p>Você sabe quais são os caminhos possíveis, os riscos e as expectativas desde o início.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sobre">
+  <div class="wrap">
+    <div class="about-figure">Nenhuma pessoa procura uma advogada de família porque vive um momento simples.</div>
+    <div class="about-body">
+      <p>Existem dúvidas, inseguranças, mudanças na rotina e decisões que podem repercutir por muitos anos.</p>
+      <p>Acredito que a advocacia deve oferecer mais do que respostas jurídicas. Deve oferecer clareza para que cada pessoa compreenda seus direitos e participe, de forma consciente, das decisões sobre o próprio futuro.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq-item">
+      <h3>Divórcio consensual e litigioso, qual a diferença?</h3>
+      <p>No consensual, as partes chegam a um entendimento sobre os termos, e o processo tende a ser mais breve, podendo até ocorrer em cartório. No litigioso, há pontos de discordância que só a Justiça pode resolver.</p>
+    </div>
+    <div class="faq-item">
+      <h3>É possível se divorciar sem ir à Justiça?</h3>
+      <p>Sim. Quando não há filhos menores ou incapazes e as partes estão de acordo, o divórcio pode ser formalizado diretamente em cartório, pela via extrajudicial.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Como é definida a guarda dos filhos?</h3>
+      <p>A decisão considera o melhor interesse da criança, a rotina de cada um dos pais e a possibilidade de um convívio equilibrado com ambos, seja em guarda compartilhada ou unilateral.</p>
+    </div>
+    <div class="faq-item">
+      <h3>O valor da pensão alimentícia pode ser revisado?</h3>
+      <p>Sim. Sempre que houver mudança relevante na capacidade financeira de quem paga ou na necessidade de quem recebe, cabe pedido de revisão do valor.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Quanto tempo leva um processo de divórcio?</h3>
+      <p>Varia conforme o nível de consenso entre as partes e a complexidade da partilha de bens. Casos consensuais costumam se resolver em semanas; os litigiosos, em meses, por vezes mais.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contato">
+  <div class="wrap">
+    <div class="contact-inner">
+      <h2>O primeiro passo costuma ser compreender quais são os seus direitos.</h2>
+      <div class="contact-links">
+        <a class="btn-primary" href="https://wa.me/5561981344747" style="display: inline-block; text-align: center;">Agendar uma conversa</a>
+        <span style="color: var(--text-faint); font-size: 13px;">Atendimento online para clientes em todo o Brasil</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Patrícia Magalhães — OAB/DF 84.925</span>
+  </div>
+</footer>
+
+</body>
+</html>
